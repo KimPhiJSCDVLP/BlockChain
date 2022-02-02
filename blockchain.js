@@ -27,7 +27,7 @@ class BlockChain {
         this.blockTime = 30000;
     }
 
-    getLasBlock() {
+    getLastBlock() {
         return this.chain[this.chain.length - 1];
     }
 
@@ -53,6 +53,7 @@ class BlockChain {
 
 }
 
-const blockChain = new Blockchain();
+
+const blockChain = new BlockChain();
 blockChain.addBlock(new Block(Date.now().toString(), { from: "LeeFy", to: "DuyNX", amount: 1000 }));
 console.log(blockChain.chain); 
